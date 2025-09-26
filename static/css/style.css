@@ -1,0 +1,61 @@
+/*Style paragrah font size and color*/
+p {
+    font-size:16px;
+    color: #414833;
+}
+/*Style level one header centered, with background and text color*/
+h1 {
+    color: #ebe3d2;
+    background-color: #414833;
+    text-align: center;
+}
+/*Style level two headers background, color, and centered*/
+h2 {
+    color: #ebe3d2;
+    background-color: #737a5d;
+    text-align: center
+}
+/*Style level three headers color*/
+h3 {
+    color: #737a5d;
+}
+/*Style bullets and text color of bullet list*/
+ul {
+    list-style-type: circle;
+    color: #414833;
+}
+/*Style text color of numbered list*/
+ol {
+    color: #414833;
+}
+
+/*Style table with borders, width, centering, and background color. */
+table {
+    border: 2px solid #414833;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+th, td {
+    color: #414833;
+    background-color: #ebe3d2;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*Formatting for special paragraph*/
+#newparagraph {
+    font-size:20px;
+    font-weight: bold;
+}
+.fancy-link {
+    color: #414833;
+    font-weight: bold;
+    background-color: #ebe3d2;
+}
+/*Width and height attributes for img tags (logo only)*/
+img.logo {
+    Width: 221px;
+    Height: 92px;
+}
