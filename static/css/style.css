@@ -5,18 +5,21 @@ p {
 }
 /*Style level one header centered, with background and text color*/
 h1 {
+    margin-top: 0.5rem;
     color: #ebe3d2;
     background-color: #414833;
     text-align: center;
 }
 /*Style level two headers background, color, and centered*/
 h2 {
+    margin-top: 0.5rem;
     color: #ebe3d2;
     background-color: #737a5d;
     text-align: center
 }
 /*Style level three headers color*/
 h3 {
+    margin-top: 0.5rem;
     color: #737a5d;
 }
 /*Style bullets and text color of bullet list*/
@@ -43,7 +46,6 @@ th, td {
     text-align: center;
     vertical-align: middle;
 }
-
 /*Formatting for special paragraph*/
 #newparagraph {
     font-size:20px;
@@ -58,4 +60,68 @@ th, td {
 img.logo {
     Width: 221px;
     Height: 92px;
+}
+/* Style change text button */
+#changeText {
+    border: 1px solid #414833;
+    background: #A4AC86;
+    color: #ebe3d2;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Color "Your name: */
+#nameForm label {
+  color: #414833;
+}
+/* Your name text box */
+#nameInput {
+    margin-top: 0.5rem;
+    border: 1px solid #414833;
+    border-radius: 4px;
+    color: #414833;
+    background: #ebe3d2;
+}
+/* Greeting text */
+#greetOutput {
+    color: #414833;
+}
+/* Vertically align courses */
+#coursesForm {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+/* Submit button */
+#nameForm button {
+     display: inline-block;
+     border: 1px solid #414833;
+     background: #A4AC86;
+     color: #ebe3d2;
+     border-radius: 6px;
+     cursor: pointer;
+}
+/* Style help button */
+#coursesHelp {
+     border: 1px solid #414833;
+     background: #A4AC86;
+     color: #ebe3d2;
+     border-radius: 4px;
+     cursor: pointer;
+}
+/* Change text color */
+#coursesForm label {
+    align-items: center;
+    color: #414833;
+}
+/* Checkbox tick color */
+#coursesForm input[type="checkbox"] {
+    accent-color: #A4AC86;
+}
+/* Adjust style of submit button */
+#coursesForm button {
+    border: 1px solid #414833;
+    background: #A4AC86;
+    color: #ebe3d2;
+    border-radius: 4px;
+    cursor: pointer;
 }
