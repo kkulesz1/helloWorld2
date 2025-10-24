@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block page_title %}Contact{% endblock %}
+{% block page_head %}Contact Page!{% endblock %}
+{% block page_content %}
+    <!-- Contact page via bootstrap template -->
+    {% if submitted %}
+        <!-- Thank you message shown after POST -->
+        <div class="alert alert-success mt-4">
+          <h2 class="h5 mb-3">Thanks for completing my form!</h2>
+          <p><strong>Name:</strong> {{ first_name }} {{ last_name }}</p>
+          <p><strong>Email:</strong> {{ email }}</p>
+          <p><strong>Mood (1–10):</strong> {{ mood }}</p>
+          <p><strong>Is the form awesome?</strong>
+             {{ "Yes" if awesome == "on" else "No" }}</p>
+          <a href="{{ url_for('contact') }}" class="btn btn-outline-primary mt-3">
+            Complete form again
+          </a>
+        </div>
+    {% else %}
+    <!-- Contact form (shown on GET) -->
+        <form method="POST" action="{{ url_for('contact') }}">
+            <!-- First and last name inputs (horizontally in line)-->
+            <div class="row mb-3">
+                <div class="col">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First name">
+                </div>
+                <div class="col">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last name">
+                </div>
+            </div>
+            <!-- Email input -->
+          <div class="mb-3">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+            <!-- Select a number -->
+          <div class="mb-3">
+            <label for="exampleFormControlSelect1">How are you feeling on a scale from 1-10? (1 = terrible... 10 = amazing!)</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="mood">
+              {% for i in range(1, 11) %}
+                <option value="{{ i }}">{{ i }}</option>
+              {% endfor %}
+            </select>
+          </div>
+            <!-- Checkbox -->
+          <div class="form-group form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="awesome">
+            <label class="form-check-label" for="exampleCheck1">Isn't this form awesome?</label>
+          </div>
+            <!-- Submit button -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    {% endif %}
+{% endblock %}
